@@ -2,6 +2,7 @@ import os
 
 app_name = '{{cookiecutter.app_name}}'
 
-shell_script = 'rails new .'
-
-os.system(shell_script)
+if '{{cookicutter.use_docker}}'.lower() != 'y':
+  os.system('rails new .')
+else: 
+  os.system('docker-compose run web rails new . --force --database=postgresql')
