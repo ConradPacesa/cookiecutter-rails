@@ -24,6 +24,7 @@ if '{{cookiecutter.use_docker}}'.lower() == 'y':
   with open('./config/database.yml', 'w') as f:
     f.write(database)
   f.close()
+  os.system('docker-compose run web rake db:create')
   os.system('docker-compose up')
 else: 
   os.system('rails new .')
