@@ -28,3 +28,8 @@ if '{{cookiecutter.use_docker}}'.lower() == 'y':
   os.system('docker-compose up')
 else: 
   os.system('rails new .')
+  os.remove('./docker-compose.yaml')
+  os.remove('./Dockerfile')
+
+if '{{cookiecutter.travis_ci}}'.lower() != 'y':
+  os.remove('./.travis.yaml')

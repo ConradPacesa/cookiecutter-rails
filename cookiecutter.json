@@ -1,12 +1,10 @@
 {
   "full_name": "Conrad Pacesa",
-  "github_username": "ConradPacesa",
   "app_name": "myrailsapp",
   "project_short_description": "A Rails project.",
   "rails_version": "5.2.0",
-  "docker_hub_username": "ConradPacesa",
+  "ruby_version": "2.5",
   "docker_image": "ruby:2.5",
   "use_docker": "y",
-  "use_git": "y",
-  "use_ci": ["travis", "circle", "none"]
+  "travis_ci": "y"
 }
